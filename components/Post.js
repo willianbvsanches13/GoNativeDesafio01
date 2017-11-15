@@ -29,18 +29,25 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 15,
+    marginTop: 10,
     color: '#666666',
-    marginTop: 20,
     shadowColor: '#DA6C6C',
     shadowRadius: 5,
+  },
+  textContainer: {
+    marginTop: 10,
+    borderTopWidth: 1,
+    borderTopColor: '#EEEEEE',
   },
 });
 
 const Post = ({ post }) => (
   <View style={styles.container}>
-    <Text style={styles.title}>{ post.title }</Text>
-    <Text style={styles.autor}>{ post.autor }</Text>
-    <Text style={styles.text} >{ post.text }</Text>
+    <Text style={styles.title}>{post.title}</Text>
+    <Text style={styles.autor}>{post.autor}</Text>
+    <View style={styles.textContainer}>
+      <Text style={styles.text} >{post.text}</Text>  
+    </View>    
   </View>
 );
 
