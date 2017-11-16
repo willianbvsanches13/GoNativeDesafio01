@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   ScrollView,
+  View,
 } from 'react-native';
 
 import './config/ReactotronConfig';
@@ -38,13 +39,14 @@ export default class App extends Component {
       },
     ],
   };
-
   render() {
     return (
-      <ScrollView style={styles.container} >
+      <View>
         <Header title="GoNative App" />
-        { this.state.posts.map(post => (<Post key={post.id} post={post} />)) }
-      </ScrollView>
+        <ScrollView style={styles.container} >
+          { this.state.posts.map(post => (<Post key={post.id} post={post} />)) }
+        </ScrollView>  
+      </View>
     );
   }
 }
